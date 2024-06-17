@@ -1,0 +1,57 @@
+package defalt;
+
+import java.util.Locale;
+import java.util.Scanner;
+import coisas.Conta;
+
+public class ConstCon {
+	
+    public static void main(String[] args) {
+		
+		    Locale.setDefault(Locale.US);
+		    Scanner sc = new Scanner(System.in);
+		    
+		    System.out.println("Entre com os Dados da Conta: ");
+			
+			System.out.println("Numero: ");
+			int numero = sc.nextInt();
+			
+			System.out.println("Nome: ");
+			String proprietario = sc.nextLine();
+			
+			System.out.println("Quantidade em Estoque: ");
+			double valor = sc.nextDouble();
+		    
+		    System.out.println("Deseja fazer um Primeiro Deposito? S/N ");
+		    String resposta = sc.nextLine();
+		    
+		    if (resposta == "S" || resposta == "s") {
+		    	System.out.println("Qual valor do Primeiro Deposito?  ");
+			    valor = sc.nextDouble();
+		    }
+		    else {
+		    	System.out.println("Obrigado pela Preferência!");
+		    }
+		    
+		    Conta conta = new Conta(numero, proprietario, valor); 
+			System.out.println();
+			
+			Conta conta1 = new Conta(numero, proprietario); 
+		    
+			System.out.println("Entre com a quantidade para Adicionar a Conta: "); 
+			int add = sc.nextInt();
+			conta.valorDeposito(valor);
+			System.out.println();
+			
+			System.out.println("Alteração de dados: " + conta);
+			System.out.println();
+			
+			System.out.println("Entre com a quantidade para Sacar da Conta: ");
+			valor = sc.nextInt();
+			
+			conta.valorSaque(valor);
+			System.out.println();
+			
+			System.out.println("Alteração dos dados: " + conta);
+    }
+}
