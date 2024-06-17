@@ -1,0 +1,38 @@
+package coisas;
+
+public class Conta {
+		
+		public int numero;
+		public String proprietario;
+		public double valor;
+		
+		public Conta (int numero, String proprietario, double valor) {
+			this.numero = numero;
+			this.proprietario = proprietario;
+			this.valor = valor;
+		}
+		
+		public Conta (int numero, String proprietario) {
+			this.numero = numero;
+			this.proprietario = proprietario;
+		}
+		
+		public double valorDeposito(double valor2double) {
+			return this.valor =+ valor;
+		}
+		
+		public double valorSaque(double valor2double) {
+			return this.valor =- valor;
+		}
+		
+		public String toString() {
+			return numero
+					+ ", Proprietario"
+					+ proprietario
+					+ ", "
+					+ String.format("%.2f", valor)
+					+ ", "
+					+ "Quant., Total: $ "
+					+ String.format("%.2f", valorDeposito(valor));
+		}
+}
